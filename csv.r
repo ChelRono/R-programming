@@ -2,10 +2,10 @@
 print(getwd())
 
 # Set current working directory.
-#setwd("/web/com")
+setwd("/web/com")
 
 # Get and print current working directory.
-#print(getwd())
+print(getwd())
 
 #1.Reading a csv file
 data <- read.csv("input.csv")
@@ -42,7 +42,7 @@ print(retval)
 data <- read.csv("input.csv")
 
 #Get everyone in IT
-retval <- subset(data,dept=="IT")
+retval <- subset(data, dept == "IT")
 print(retval)
 
 #6.Get the persons in IT department whose salary is greater than 600
@@ -50,7 +50,7 @@ print(retval)
 data <- read.csv("input.csv")
 
 #Get everyone in IT with salary greater than 600
-retval <- subset(data,dept=="IT" & salary>600)
+retval <- subset(data, dept == "IT" & salary > 600)
 print(retval)
 
 #7.Get the people who joined on or after 2014
@@ -58,7 +58,7 @@ print(retval)
 data <- read.csv("input.csv")
 
 #Get those who joined on are after 2014
-retval <- subset(data,as.Date(start_date ) > as.Date("2014-01-01") )
+retval <- subset(data, as.Date(start_date  ) > as.Date("2014-01-01") )#nolint
 
 print(retval)
 
@@ -68,7 +68,7 @@ data <- read.csv("input.csv")
 retval <- subset(data, as.Date(start_date) > as.Date("2014-01-01"))
 
 # Write filtered data into a new file.
-write.csv(retval,"output.csv")
+write.csv(retval, "output.csv")
 newdata <- read.csv("output.csv")
 print(newdata)
 
@@ -78,7 +78,7 @@ data <- read.csv("input.csv")
 retval <- subset(data, as.Date(start_date) > as.Date("2014-01-01"))
 
 # Write filtered data into a new file.
-write.csv(retval,"output.csv", row.names = FALSE)
+write.csv(retval, "output.csv", row.names = FALSE)
 newdata <- read.csv("output.csv")
 print(newdata)
-
+#
